@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="header__contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact__header-wrapper">
+                    <h2 class="contact__title">Contact
+                    <span class="text-background">Contact.</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="site__map">
+        <div class="container">
+            <div class="row">
+                <div class="grid__container__low">
+                    <div class="left__container__info">
+                        <div class="info_text">
+                            <h2>Nous contacter Autrement</h2>
+                        </div>
+                        <div class="info__number__item">
+                            <p class="contact__infos-item-title subtitle--large bold">par telephone.</p>
+                            <div class="text__phone_info">
+                                <p>Du lundi au vendredi de 9h à 18h au <a href="tel:0970731871" title="tel:0970731871">09.70.73.18.71</a> ou <a href="https://wa.me/message/S2UIJ6K2PQT6F1" title="WhatsApp Feed">WhatsApp</a>. On s’appelle ?</p>
+                            </div>
+                        </div>
+
+                        <div class="info__number__item">
+                            <p class="contact__infos-item-title subtitle--large bold">par mail.</p>
+                            <div class="contact__infos-item-description rte">
+                                <p>Écrire. Échanger. Discuter. : </p><p>service.clients@feed.co</p>
+                            </div>
+                        </div>
+
+                        <div class="info__number__item">
+                            <p class="contact__infos-item-title subtitle--large bold">Les réseaux sociaux.</p>
+                            <div class="contact__infos-item-description rte">
+                                <div class="contact__infos-item-description rte">
+                                    <p>Inspirer. S’inspirer. Rejoins-nous.</p>
+                                </div>
+                                <div class="social-icon__container">
+                                    <a href=""><i class='bx bxl-facebook'></i></a>
+                                    <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                                    <a href=""><i class='bx bxl-twitter'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="right__container__info">
+                    <div class="box__color__form">
+                        {{ form_start(Contact, { 'attr': {'autocomplete': 'off'} })  }}
+
+                        {{ form_widget(Contact.Nom, { 'attr': {'class': "span12",
+                            'placeholder': "Nom Complet",'autofocus':"on"} }) }}
+
+                        {{ form_widget(Contact.Email, { 'attr': {'class': "span12",
+                            'placeholder': "Email",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.numero, { 'attr': {'class': "span12",
+                            'placeholder': "Numero Telephone",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.message, { 'attr': {'class': "span12",
+                            'placeholder': "Message",'autofocus':"on"} }) }}
+
+                        {{ form_end(Contact) }}
+                    </div>
+                </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="cart">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.1347979447337!2d10.24235671523431!3d36.767333579955356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd360996ad6c31%3A0xc7f2d37230d0dcd2!2sSidi%20Rezig!5e0!3m2!1sfr!2stn!4v1661409774146!5m2!1sfr!2stn" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    {% include'home/_footer.html.twig' %}
+{% endblock %}

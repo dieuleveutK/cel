@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content__main">
+    <body id="top">
+    <div class="header__tome">
+        <div class="linner__header__tome">
+            <logo>
+                <picture>
+                    <img src="" alt="">
+                </picture>
+            </logo>
+            <ul>
+                <li><a href="">Formation.</a></li>
+                <li><a href="">Apropos De Nous.</a></li>
+                <li><a href="">Domaines D'expertises.</a></li>
+                <li><a href="">Contact.</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="pading">
+        <div class="bulble"></div>
+        <div class="bulble"></div>
+        <div class="bulble"></div>
+        <div class="bulble"></div>
+        <div class="contact__section">
+            <div class="linner__contact query_phone">
+                <div class="left__contact">
+                    <div class="midle__element">
+                        <div>
+
+                            <div class="up__text">
+                                <h1>On peut
+
+                                    <span class="hide">vous aider !</span></h1>
+                            </div>
+                            <p class="re__ixl">Nous avons à cœur de vous aider, et de vous proposer l’accompagnement le plus adapté à votre besoin ! ❤️</p>
+
+                            <p class="re__ixl">Nous serronr ravis de recevoir votre message ! Parlez de votre projet et de la façon dont nous pouvons vous aider</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right__contact">
+                    <div class="midle__element__plx">
+                        <h1 class="cke_arrow">Nous contacter.</h1>
+                        {{ form_start(Contact, { 'attr': {'autocomplete': 'off'} })  }}
+
+                        {{ form_widget(Contact.nom, { 'attr': {'class': "span12",
+                            'placeholder': "Benoit Xavier",'autofocus':"on"} }) }}
+
+                        {{ form_widget(Contact.email, { 'attr': {'class': "span12",
+                            'placeholder': "Exemple@.fr",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.numero, { 'attr': {'class': "span12",
+                            'placeholder': "(+216) 567-654-22",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.message, { 'attr': {'class': "span12",
+                            'placeholder': "Hey, j'aimerais en savoir plus sur...",'autofocus':"on"} }) }}
+
+                        {{ form_end(Contact) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% include'home/_footer.html.twig' %}
+
+    </body>
+    </div>
+{% endblock %}

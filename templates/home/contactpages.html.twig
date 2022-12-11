@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content__main">
+    <body id="top">
+    <header class="header form_header__contact" data-header>
+        <div class="container">
+
+            <a href="{{ path('app_home') }}" class="logo">Celconsulting</a>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="wrapper">
+                    <a href="{{ path('app_home') }}" class="logo">Celconsulting</a>
+
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="{{ path('learning') }}" class="navbar-link" data-nav-link>Formation.</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="{{ path('about') }}" class="navbar-link" data-nav-link>Concept.</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{ path('domaine') }}" class="navbar-link" data-nav-link>Domaines D'expertises.</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="{{ path('contactpages') }}" class="navbar-link" data-nav-link>Contact.</a>
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <a href="#" class="btn btn-primary has-before has-after">
+                <i class='bx bxs-phone-incoming'></i> &nbsp;&nbsp;+216&nbsp;588&nbsp;11&nbsp;997
+            </a>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+    </header>
+
+
+    <section class="form__contact__section">
+        <div class="contact__pages">
+            <div class="box__text">
+                <div class="left__tet__box">
+                    <div class="left__content__text">
+                        <h1 class="h1__text">Nous contacter Autrement</h1>
+                        <div class="box__details_text">
+                            <div class="box__kld">
+                                <h1>Par téléphone.</h1>
+                                <p>Du lundi au vendredi de 9h à 18h</p>
+                                <p>ou On s’appelle ? <a href="">WhatsApp</a></p>
+                            </div>
+                            <div class="box__kld">
+                                <h1>Par e-mail.</h1>
+                                <p>Écrire. Échanger. Discuter.</p>
+                                <p>service.clients@feed.co</p>
+                            </div><div class="box__kld">
+                                <h1>Les réseaux sociaux.</h1>
+                                <div class="liste__icon">
+                                    <a href=""><i class='bx bxl-facebook'></i></a>
+                                    <a href=""><i class='bx bxl-instagram'></i></a>
+                                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right__text__box">
+                    <div class="form__box__content">
+                    <h2 class="head__h2">Vous êtes?</h2>
+                        <div class="content__liner">
+                            {{ form_start(Contact, { 'attr': {'autocomplete': 'off'} })  }}
+
+                            {{ form_widget(Contact.email, { 'attr': {'class': "span12",
+                                'placeholder': "Email",'autofocus':"on"} }) }}
+
+
+                            {{ form_widget(Contact.message, { 'attr': {'class': "span12",
+                                'placeholder': "Message",'autofocus':"on"} }) }}
+
+                            {{ form_end(Contact) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    {% include'home/_footer.html.twig' %}
+{% endblock %}

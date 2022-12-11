@@ -1,0 +1,146 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content__main">
+    <body id="top"  >
+    <div class="header__tome">
+    </div>
+
+
+    <section class="about__xl_mall">
+
+        <div class="triangle-left"></div>
+        <div class="triangle-right"></div>
+        <div class="triangle-photo"></div>
+
+        <div class="home__content__test">
+            <div class="col-md">
+                <div class="up__text">
+                  <h5>Apropos de nous</h5>
+                </div>
+                <p class="text__fill" >Nous sommes un cabinet international de conseil en stratégie qui propose une gamme de services-conseil, de programmes de formation et de systèmes d'aide à la décision dans plusieurs domaines.</p>
+
+
+                <p class="text__fill">Le Cabinet d'entrepreneuriat et Leadership détient un réservoir de ressources humaines expert en production de ressources des connaissances et orientations stratégiques et vous offre la possibilité d'être plus meilleur que hier.</p>
+
+            <p class="text__fill" >Nous accompagnons et assistons des agents économiques ainsi que des organisations à croître leur productivité et améliorer leurs activités</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about__xl_mall">
+
+
+        <div class="home__content__test">
+            <div class="col-md">
+                <div class="up__text">
+                    <h5>Notre Mission</h5>
+                </div>
+                <h6><strong>Ensemble</strong> on va plus loin</h6>
+                <p class="text__fill">faciliter l’acquisition et transmission des compétences et connaissances, les rendre plus accessible à la ressource humaine en Afrique, informer, former et transformer positivement les professionnels en Afrique de divers secteurs dans le développement de leurs activités internes et externes. </p>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="team">
+        <div class="bounce__linear"></div>
+        <div class="bounce__linear"></div>
+        <div class="bounce__linear"></div>
+        <div class="bounce__linear"></div>
+        <div class="max__team">
+            <div class="linner__tema">
+                <div class="up__text__team">
+                    <h5 class="holl__up_text"> <strong>Une équipe engagée</strong> face aux défis du monde actuel</h5>
+                </div>
+                <div class="box__team">
+                    <div class="card">
+                        <div class="circle">
+                            <div class="imgBox xkll">
+                                <img src="{{ asset('build/images/L.jpeg') }}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <span>consultant en management</span>
+                        </div>
+                        <div class="content">
+
+                            <h3>Christian Onsokie</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="{{ asset('build/images/LL.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="post">
+                            <span>community and customer manager</span>
+                        </div>
+                        <div class="content">
+                            <h3> Ghislaine KASONGO</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="{{ asset('build/images/LLL.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="post">
+                            <span>Founder and CEO</span>
+                        </div>
+                        <div class="content">
+                            <h3>SENGE SENGE DENIS</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="{{ asset('build/images/LLLL.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="post">
+                            <span> Country Manager</span>
+                        </div>
+                        <div class="content">
+                            <h3>DEBORAH MALUKU</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="display: none">
+        <div class="team__section">
+            <div class="center__element__team">
+              <div class="liner__box">
+                  <div class="left__text__up">
+                      <h1>faux text</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa et ipsam itaque iure odio optio quaerat voluptatibus? Error, quae, tempora. Ab, accusamus accusantium corporis deleniti earum libero nam quis sed.</p>
+                  </div>
+                  <div class="right__text__up">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto, enim facere harum incidunt inventore nesciunt. Aliquam amet animi, doloremque, esse ex maxime odio quibusdam quidem repellat sed totam, vero.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    {% include'home/_footer.html.twig' %}
+    </body>
+{% endblock %}

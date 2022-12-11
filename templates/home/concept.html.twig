@@ -1,0 +1,677 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+
+{% block body %}
+    <style>
+        /*-----------------------------------*\
+  #foodhub.css
+\*-----------------------------------*/
+
+        /**
+         * copyright 2022 @codewithsadee
+         */
+
+
+
+
+
+        /*-----------------------------------*\
+          #CUSTOM PROPERTY
+        \*-----------------------------------*/
+
+        :root {
+
+            /**
+             * colors
+             */
+
+            --red-orange-crayola: hsl(0, 100%, 66%);
+            --space-cadet: hsl(249, 37%, 19%);
+            --pistachio: hsl(88, 50%, 60%);
+            --cultured: hsl(220, 13%, 95%);
+            --saffron: hsl(45, 91%, 58%);
+            --rhythm: hsl(240, 9%, 51%);
+            --white: hsl(0, 0%, 100%);
+
+            /**
+             * typography
+             */
+
+            --fs-1: 46px;
+            --fs-2: 28px;
+            --fs-3: 18px;
+            --fs-4: 15px;
+            --fs-5: 14px;
+
+            /**
+             * spacing
+             */
+
+            --px: 30px;
+            --py: 60px;
+
+            /**
+             * others
+             */
+
+            --default-transition: 0.75s ease;
+
+        }
+
+
+
+
+
+        /*-----------------------------------*\
+          #RESET
+        \*-----------------------------------*/
+
+        *, *::before, *::after {
+            margin:  0;
+            padding: 0;
+            box-sizing: border-box;
+            outline-offset: 5px;
+        }
+
+        li { list-style: none; }
+
+        a {
+            font: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        img, svg, ion-icon, span, button { display: block; }
+
+        html {
+            font-family: "Rubik", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar { width: 5px; }
+
+        ::-webkit-scrollbar-track { background: var(--cultured); }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: var(--saffron);
+        }
+
+        ::-webkit-scrollbar-thumb:hover { background: var(--space-cadet); }
+
+
+
+
+
+
+
+
+
+
+        /*-----------------------------------*\
+          #MAIN CONTAINER
+        \*-----------------------------------*/
+
+
+
+
+
+
+
+
+        .shape {
+            position: absolute;
+            filter: drop-shadow(0px 3px 6px hsla(0, 0%, 0%, 0.1));
+        }
+
+        .shape-1 {
+            top:  0;
+            left: 5%;
+            animation: scaleUp 2s 3s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            right: 0;
+            top:  55%;
+            animation: scaleUp 3s 4s ease-in-out infinite;
+        }
+
+        .shape-3{
+            bottom: 5%;
+            left:   5%;
+            animation: scaleUp 3s 1s ease-in-out infinite;
+        }
+
+        .shape-4 {
+            top:  35%;
+            right: 0;
+            animation: moveUp 3s 1s ease-in-out infinite;
+        }
+
+        .shape-5 {
+            top: 60%;
+            left: 0;
+            animation: moveUp 3s ease-in-out infinite;
+        }
+
+
+        @keyframes scaleUp {
+
+            0%,
+            100% { transform: translateY(0) scale(1); }
+
+            50% { transform: translateY(-5px) scale(1.05);}
+
+        }
+
+
+        @keyframes moveUp {
+
+            0%,
+            100% { transform: translateY(0); }
+            20%  { transform: translateY(-3px); }
+            50%  { transform: translateY(-8px); }
+
+        }
+
+
+
+
+
+        /*-----------------------------------*\
+          #ABOUT
+        \*-----------------------------------*/
+
+        .about {
+            padding: var(--py) var(--px);
+            display: grid;
+            grid-template-columns: 3fr 4fr;
+            gap: 60px;
+        }
+        .about{
+            max-width:1150px;
+            margin: auto;
+        }
+
+        .about-left { position: relative; }
+
+        .about-left .img-box {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        .about-img {
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+            animation: lazy-scaleUp 30s linear infinite;
+        }
+
+
+        @keyframes lazy-scaleUp {
+
+            0%,
+            100% { transform: scale(1); }
+            50%  { transform: scale(1.2); }
+
+        }
+
+
+        .abs-content-box {
+            background: var(--white);
+            position: absolute;
+            bottom: -20px;
+            right:  -20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.1);
+        }
+
+        .dotted-border {
+            border: 3px dotted var(--cultured);
+            padding: 10px;
+        }
+
+        .number-lg {
+            font-size: var(--fs-1);
+            font-family: "Monoton", cursive;
+            color: var(--space-cadet);
+        }
+
+        .text-md {
+            font-size: var(--fs-3);
+            font-weight: 600;
+            color: var(--space-cadet);
+        }
+
+        .shape-6 {
+            right: -9px;
+            top:   35%;
+            animation: scaleUp 2s 3s ease-in-out infinite;
+        }
+
+        .shape-7 {
+            top:   50%;
+            left: -15px;
+            animation: scaleUp 3s ease-in-out infinite;
+        }
+
+        .shape-8 {
+            top: -10px;
+            left: 15%;
+            animation: moveUp 3s 1s ease-in-out infinite;
+        }
+
+        .shape-9 {
+            bottom: -20px;
+            left:     5%;
+            animation: moveUp 3s ease-in-out infinite;
+        }
+
+        .about-right .section-title { margin-bottom: 30px; }
+
+        .about-right p {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .about-right .section-title {
+            margin-bottom: 30px;
+        }
+
+            .section-title {
+                max-width: 420px;
+                color: var(--space-cadet);
+                font-size: var(--fs-2);
+                font-weight: 600;
+            }
+        .about-right p {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        .section-text {
+            max-width: 320px;
+            color: var(--rhythm);
+            font-size: var(--fs-4);
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+        }
+        .about-left { position: relative; }
+
+        .about-left .img-box {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        .about-img {
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+            animation: lazy-scaleUp 30s linear infinite;
+        }
+        .story__about{
+            margin: auto;
+            max-width: 1150px;
+            padding: var(--py) var(--px);
+            display: grid;
+            grid-template-columns: 3fr 4fr;
+            gap: 60px;
+        }
+
+
+        .text__story{
+            margin-bottom: 30px;
+        }
+
+        .text__story p{
+            font-size: 28px;
+            line-height: 44px;
+            letter-spacing: -.5px;
+        }
+        .left__content{
+            position: relative;
+        }
+        .right__content{
+            margin-top: -103px;
+        }
+
+
+
+
+
+        .concept-2__words {
+            padding-left: 29px;
+        }
+
+            .concept-2__words {
+                padding-left: 51px;
+            }
+                .concept-2__words {
+                    padding-left: 27px;
+                    margin-bottom: 168px;
+                }
+
+        .concept-2__word {
+            font-size: 90px;
+            line-height: 90px;
+            background-position: 0 -90px;
+            background-size: 100% 180px;
+        }
+        .concept-2__word {
+            position: relative;
+            font-family: "gordita-bold",sans-serif;
+            font-size: 5vw;
+            letter-spacing: -1px;
+            background-image: -webkit-linear-gradient(#19806d 50%,#e7e7e7 50%);
+            background-repeat: repeat;
+            background-position: 0 -50px;
+            background-size: 100% 100px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+.box__img__dr{
+    width: 70%;
+    height: 400px;
+    background-color: #00acee;
+}
+
+
+.box__img__dr img{
+  width: 100%;
+}
+.story_up{
+    background-color: #3b5998;
+    height: 680px;
+}
+.up__text__info h2{
+   font-size: 11px;
+    color: #dfdfdf;
+}  
+.up__text__info h5{
+font-size: 18px;
+    color: #000;
+ }
+.info__text_up p{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    color: #fff;
+}
+strong{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.up_mission{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1.2rem;
+}
+
+        .service-card .card-number {
+            font-size: 42px;
+            font-family: "Monoton", cursive;
+            color: var(--saffron);
+        }
+
+
+    </style>
+
+    <div class="header__contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact__header-wrapper">
+                    <h2 class="contact__title">Concept
+                        <span class="text-background">Concept.</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+
+<div class="container__about">
+    <section class="about" id="about">
+
+        <div class="about-left">
+
+            <div class="img-box">
+                <img src="{{ asset('build/images/about-image.jpg') }}" alt="about image" class="about-img" width="250">
+            </div>
+
+            <div class="abs-content-box">
+                <div class="dotted-border">
+                    <p class="number-lg">17</p>
+                    <p class="text-md">Years <br> Experiense</p>
+                </div>
+            </div>
+
+            <img src="{{ asset('build/images/circle.svg') }}" alt="circle shape" class="shape shape-6" width="20">
+            <img src="{{ asset('build/images/circle.svg') }}" alt="circle shape" class="shape shape-7" width="30">
+            <img src="{{ asset('build/images/ring.svg') }}" alt="ring shape" class="shape shape-8" width="35">
+            <img src="{{ asset('build/images/ring.svg') }}" alt="ring shape" class="shape shape-9" width="80">
+
+        </div>
+
+        <div class="about-right">
+
+            <h2 class="section-title">We are doing more than
+                you expect</h2>
+
+            <p class="section-text">
+                Faudantium magnam error temporibus ipsam aliquid neque quibusdam dolorum, quia ea numquam assumenda mollitia
+                dolorem
+                impedit. Voluptate at quis exercitationem officia temporibus adipisci quae totam enim dolorum, assumenda.
+                Sapiente
+                soluta nostrum reprehenderit a velit obcaecati facilis vitae magnam tenetur neque vel itaque inventore eaque
+                explicabo
+                commodi maxime! Aliquam quasi, voluptates odio.
+            </p>
+
+            <p class="section-text">
+                Consectetur adipisicing elit. Cupiditate nesciunt amet facilis numquam, nam adipisci qui voluptate voluptas
+                enim
+                obcaecati veritatis animi nulla, mollitia commodi quaerat ex, autem ea laborum.
+            </p>
+
+            <img src="./assets/images/signature.png" alt="signature" class="signature" width="150">
+
+        </div>
+
+    </section>
+    <section class="story__about">
+        <div class="left__content">
+            <div class="shap__up"></div>
+            <div class="shap__up"></div>
+            <div class="shap__up"></div>
+            <div class="shap__up"></div>
+            <div class="text__up">
+                <h4>TOUT PART D’ICI.</h4>
+            </div>
+            <div class="text__story">
+                <p>
+                    Tout commence avec <strong>Mr Senge Senge</strong>, le fondateur de Celconsulting.
+                </p>
+            </div>
+            <div class="title__story">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam at consectetur cupiditate distinctio dolores error hic id maiores minus, mollitia nemo qui quod sequi suscipit, vero voluptatibus. Reiciendis, tenetur.</p>
+            </div>
+
+        </div>
+        <div class="right__content">
+            <div class="buld__animate">
+              <div class="concept-2__words active">
+                  <p class="concept-2__word">Travail.</p>
+                  <p class="concept-2__word">Passion.</p>
+                  <p class="concept-2__word">Ambition.</p>
+                  <p class="concept-2__word">Détermination.</p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+  <section class="story_up">
+      <div class="story__about">
+          <div class="left__content">
+              <div class="up__text__info">
+                  <h2>La naissance de Celconsulting</h2>
+                  <h5>L'echec est son ami.</h5>
+              </div>
+              <div class="info__text_up">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda consectetur cumque est eveniet ex explicabo laboriosam nesciunt quo quod? Aliquid corporis dolore doloremque illo odit pariatur quos? Eveniet, quaerat.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto assumenda blanditiis, et illo iste laboriosam natus quam quidem repellendus, ut, veritatis voluptate voluptatibus. Aliquam assumenda doloremque nulla sit ullam?</p>
+              </div>
+
+          </div>
+          <div class="right__content">
+              <div class="box__img__dr">
+                  <img src="{{ asset('build/images/about-image.jpg') }}" alt="">
+                  <strong>fondateur et ceo</strong>
+              </div>
+
+          </div>
+      </div>
+  </section>
+<section class="team__cons">
+    <div class="story__about">
+        <div class="left__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid commodi consectetur culpa, delectus dolor eligendi et excepturi facere fuga iure laboriosam molestias nisi nulla praesentium provident quaerat ratione repudiandae.
+        </div>
+        <div class="right__content up_mission">
+            <div class="service-card">
+
+                <p class="card-number">02</p>
+
+                <h3 class="card-heading">Fresh ingredients from organic farms</h3>
+
+                <p class="card-text">
+                    Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo modi numquam.
+                </p>
+
+            </div>
+            <div class="service-card">
+
+                <p class="card-number">02</p>
+
+                <h3 class="card-heading">Fresh ingredients from organic farms</h3>
+
+                <p class="card-text">
+                    Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo modi numquam.
+                </p>
+
+            </div>
+            <div class="service-card">
+
+                <p class="card-number">02</p>
+
+                <h3 class="card-heading">Fresh ingredients from organic farms</h3>
+
+                <p class="card-text">
+                    Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo modi numquam.
+                </p>
+
+            </div>
+            <div class="service-card">
+
+                <p class="card-number">02</p>
+
+                <h3 class="card-heading">Fresh ingredients from organic farms</h3>
+
+                <p class="card-text">
+                    Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo modi numquam.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="team__cons">
+    <div class="rows">
+        <h2>Developpemt.</h2>
+        <h5>il developpe avec des personne de qualite en devellepemt. </h5>
+    </div>
+    <div class="team_img">
+        <div class="rows">
+            <img src="{{ asset('build/images/t.webp') }}" alt="">
+        </div>
+    </div>
+</section>
+ <section class="story_up team">
+     <div class="story__about">
+       <div class="left__content">
+           <div class="box__h_up">
+               <h2>Une Histoir Inspirants</h2>
+           </div>
+           <div class="dec__p">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ex in nihil placeat quae quidem veniam. Adipisci alias atque, ipsam laboriosam magnam maiores, nam porro quod, ratione sapiente sit veniam.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ex in nihil placeat quae quidem veniam. Adipisci alias atque, ipsam laboriosam magnam maiores, nam porro quod, ratione sapiente sit veniam.</p>
+           </div>
+       </div>
+         <div class="right__content mission__box">
+             <div class="mission__real">
+                 <div class="box_real">
+                     <h1>30</h1>
+                     <h2>Collaborateur</h2>
+                 </div>
+                 <div class="box_real">
+                     <h1>30</h1>
+                     <h2>Collaborateur</h2>
+                 </div>
+                 <div class="box_real">
+                     <h1>30</h1>
+                     <h2>Collaborateur</h2></div>
+                 <div class="box_real">
+                     <h1>30</h1>
+                     <h2>Collaborateur</h2>
+                 </div>
+             </div>
+             <div class="ci__up">
+                 <h6>Et ce n’est que le début ...</h6>
+             </div>
+
+         </div>
+     </div>
+ </section>
+  <section class="story_up team">
+      <div class="story__m">
+          <div class="grid_colmn">
+              <div class="card_grid">
+                  <div class="bottom">
+                      00
+                  </div>
+                  <p>Chez NOVATIS, nos valeurs fondamentales sont le moteur du travail que nous effectuons et des relations que nous établissons avec nos clients et nos employés. Chaque entreprise et marque est unique, nous prenons donc le temps de comprendre vos objectifs et votre marque afin de développer et d'exécuter efficacement une stratégie qui produira les résultats que vous recherchez. </p>
+              </div>
+              <div class="card_grid">
+                  <div class="bottom-right">
+                      00
+                  </div>
+                  <p>Chaque membre de notre équipe a un impact direct sur l'avenir de NOVATIS et les résultats que nous obtenons pour nos clients. Nos valeurs en tant qu'agence digitale s'alignent étroitement sur la culture que nous cultivons chaque jour.</p>
+              </div>
+              <div class="card_grid">
+                  <div class="desig__absolute">
+                      00
+                  </div>
+                  <p>Nous comprenons que les personnes talentueuses viennent d'horizons très variés et possèdent leurs propres compétences uniques. Cependant, les traits que nous apprécions particulièrement sont les compétences en résolution de problèmes, un intérêt personnel pour la technologie, un désir actif d'apprendre continuellement et la capacité de bien travailler au sein d'une équipe soudée.</p>
+              </div>
+          </div>
+
+      </div>
+
+  </section>
+        {% include'home/_footer.html.twig' %}
+</main>
+
+
+
+{% endblock %}

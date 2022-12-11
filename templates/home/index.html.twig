@@ -1,0 +1,363 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+<div class="content__main">
+<body id="top">
+
+<!--
+  - #HEADER
+-->
+<header class="header" data-header>
+    <div class="container">
+
+        <a href="{{ path('app_home') }}" class="logo">
+            <img src="{{ asset('build/images/logo.jpeg') }}" alt="">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+            <div class="wrapper">
+                <a href="{{ path('app_home') }}" class="logo">Celconsulting</a>
+
+                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+            </div>
+
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <a href="{{ path('formation') }}" class="navbar-link" data-nav-link>Formation.</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="{{ path('apropos') }}" class="navbar-link" data-nav-link>apropos de nous.</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="{{ path('expertise') }}" class="navbar-link" data-nav-link>Domaines D'expertises.</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="{{ path('contact') }}" class="navbar-link" data-nav-link>Contact.</a>
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="btn btn-primary has-before has-after">
+            <i class='bx bxs-phone-incoming'></i> &nbsp;&nbsp;+216&nbsp;588&nbsp;11&nbsp;997
+        </a>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+</header>
+
+
+
+
+<main>
+    <article>
+
+
+        <section class="section hero" id="home" aria-label="hero">
+            <div class="container">
+                <div class="home__content__info">
+                    <p class="agency">Bienvenue &nbsp;<i class='bx bxs-hand bx__animate'></i>&nbsp</p>
+                    <h1>Building digital product brand & experience</h1>
+                    <div class="flip" style="display: none">
+                        <div><div>work</div></div>
+                        <div><div>Lifesyle</div></div>
+                        <div><div>Everything</div></div>
+                    </div>
+                    <p class="details">
+                        Cabinet d'entrepereunariat et leadership vous offre la possibilite d'etre plus meilleur qu'hier.
+                    </p>
+                    <div class="btns">
+                        <a href="" class="btn-1">get starded</a>
+                        <a href="" class="btn-2">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-content" style="display: none">
+                    <div class="agency" >
+                        Bienvenue
+                    </div>
+
+                    <h1 class="hl hero-title" style="display: none">
+                        Cabinet<span class="has-before"></span>&nbsp;d'entrepereunariat et leadership vous offre la possibilite d'etre plus meilleur qu'hier.
+                    </h1>
+                </div>
+
+                <figure class="hero-banner">
+                    <img src="./build/images/1.png" alt="hero banner" class="w-100">
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="pading">
+           <div class="container__about__xl query_phone">
+               <figure class="about-banner">
+                   <div class="img-holder">
+                       <img   src="{{ asset('build/images/ab.jpg') }}" loading="lazy" alt="about banner" class="img-cover" width="120" height="170">
+                   </div>
+
+                   <div class="pulse" style="display: none">Voir Plus</div>
+                   <div class="bounce__raduis" ></div>
+
+               </figure>
+               <div class="about__content__right">
+
+                   <h2 class="h2 section-title">
+                       Celconsulting<span class="span"></span>
+                   </h2>
+
+                   <p class="section-text">
+                       Nous sommes un cabinet international de conseil en stratégie qui propose une gamme de services-conseil, de programmes de formation et de systèmes d'aide à la décision dans plusieurs domaines.
+
+                   </p>
+                   <br>
+                   <p>Le Cabinet d'entrepreneuriat et Leadership détient un réservoir de ressources humaines expert en production de ressources des connaissances et orientations stratégiques et vous offre la possibilité d'être plus meilleur que hier. </p>
+
+               </div>
+
+
+           </div>
+        </section>
+
+
+
+
+        <section class="service color" style="display: none">
+            <div class="content__bxlk">
+
+                <div class="row__title">
+                    <h2>Domaines d'expertises</h2>
+                    <span><a href="{{ path('expertise') }}" class="btn-1">voir plus..</a></span>
+                </div>
+                <div class="seller">
+                    <div class="blx__our">
+                        <h1>FORMATIONS ET ACCOMPAGNEMENT</h1>
+                        <h6>01</h6>
+                        <p>FORMATIONS INDIVIDUELLES</p>
+                        <p>FORMATIONS PROFESSIONNELLES</p>
+                        <p>FORMATIONS INSTITUTIONNELLES</p>
+                    </div>
+                    <div class="blx__our">
+                        <h1>AUDIT ET CONSEILS </h1>
+                        <h6>02</h6>
+
+                        <p>MARKETING DIGITAL</p>
+                        <p>RESSOURCES HUMAINES </p>
+                        <p>CREATION D’ENTREPRISE</p>
+                    </div>
+                    <div class="blx__our">
+
+                        <h1>COACHING </h1>
+                        <h6>03</h6>
+                        <p>DEVELOPPEMENT PERSONNEL</p>
+                        <p>DEVELOPPEMENT PROFESSIONNEL</p>
+                        <p>COMMUNICATION ET PRISE DE PAROLE EN PUBLIC</p>
+
+                    </div>
+                    <div class="blx__our">
+
+                        <h1>NVESTISSEMENT </h1>
+                        <h6>04</h6>
+                        <p>BUSINESS ANGELC</p>
+                        <p>CLUB DEAL IMMO</p>
+                        <p>INVESTISSEMENT START-UP </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="service color pading query_phone">
+            <div class="smaller query_phone">
+                <div class="left__content__body">
+                    <div class="box__left__content">
+                        <div class="btn__content">
+                            <div class="h1">Domaines d'expertises</div>
+                            <p class="pink">expertise au service de votre développement</p>
+                            <a href="" class="btn-slide">Voir Plus.</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="rightl__content__body">
+                    <div class="right__box__line">
+                        <div class="blx__our">
+                            <h1>FORMATIONS ET ACCOMPAGNEMENT</h1>
+                            <h6>01</h6>
+                            <p>FORMATIONS INDIVIDUELLES</p>
+                            <p>FORMATIONS PROFESSIONNELLES</p>
+                            <p>FORMATIONS INSTITUTIONNELLES</p>
+                        </div>
+                        <div class="blx__our">
+                            <h1>AUDIT ET CONSEILS </h1>
+                            <h6>02</h6>
+
+                            <p>MARKETING DIGITAL</p>
+                            <p>RESSOURCES HUMAINES </p>
+                            <p>CREATION D’ENTREPRISE</p>
+                        </div>
+                        <div class="blx__our">
+
+                            <h1>COACHING </h1>
+                            <h6>03</h6>
+                            <p>DEVELOPPEMENT PERSONNEL</p>
+                            <p>DEVELOPPEMENT PROFESSIONNEL</p>
+                            <p>COMMUNICATION ET PRISE DE PAROLE EN PUBLIC</p>
+
+                        </div>
+                        <div class="blx__our">
+
+                            <h1>NVESTISSEMENT </h1>
+                            <h6>04</h6>
+                            <p>BUSINESS ANGELC</p>
+                            <p>CLUB DEAL IMMO</p>
+                            <p>INVESTISSEMENT START-UP </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="service pading">
+            <div class="content__bxlk">
+                <div class="row__title">
+                    <h2>Pourquoi nous choisir ? </h2>
+                    <span><a>Services et expériences</a></span>
+                </div>
+                <div class="seller">
+                    <div class="blx__our">
+                        <h1>titre</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsum iusto mollitia odio porro, repellat? Distinctio ea eligendi ex facere harum maxime officia quidem quo ullam voluptas? Id incidunt, voluptatibus?</p>
+                    </div>
+                    <div class="blx__our">
+                        <h1>titre</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsum iusto mollitia odio porro, repellat? Distinctio ea eligendi ex facere harum maxime officia quidem quo ullam voluptas? Id incidunt, voluptatibus?</p>
+                    </div>
+                    <div class="blx__our">
+                        <h1>titre</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsum iusto mollitia odio porro, repellat? Distinctio ea eligendi ex facere harum maxime officia quidem quo ullam voluptas? Id incidunt, voluptatibus?</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="partenair__cunsult" style="display:none;">
+            <div class="container">
+                <div class="row__title">
+                    <h2>Nos Client referents</h2>
+                </div>
+                <div class="slider">
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="box__partener">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section>
+            <div class="banner__pages">
+                <h1>How help you to get more project</h1>
+                <div class="banner__content">
+                    <div class="banner">
+                        <div class="play-btn">
+                            <i class='bx bx-play'></i>
+                        </div>
+
+                        <div class="banner__details">
+                            <div class="banner__box">
+                                <h2>100%</h2>
+                                <p>we have 100% qualified emplayer <br>who are highly educated</p>
+                            </div>
+
+                            <div class="banner__box">
+                                <h2>100%</h2>
+                                <p>we have 100% qualified emplayer <br>who are highly educated</p>
+                            </div>
+
+                            <div class="banner__box">
+                                <h2>100%</h2>
+                                <p>we have 100% qualified emplayer <br>who are highly educated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="user">
+            <div class="content__bxlk">
+                <div class="kly__dlr row__title">
+                    <h1>Ils nous font confiance</h1>
+                </div>
+                <div class="liste__logo__user">
+                    <div class="brand__logo">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="brand__logo">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="brand__logo">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                    <div class="brand__logo">
+                        <img src="{{ asset('build/images/3.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+{% include'home/_footer.html.twig' %}
+<a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+</a>
+
+</body>
+</div>
+{% endblock %}

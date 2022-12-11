@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="form__container">
+            <div class="row__form">
+                <div class="left__form__content">
+                    <div class="box__color__form">
+                        {{ form_start(Contact, { 'attr': {'autocomplete': 'off'} })  }}
+
+                        {{ form_widget(Contact.Nom, { 'attr': {'class': "span12",
+                            'placeholder': "Nom Complet",'autofocus':"on"} }) }}
+
+                        {{ form_widget(Contact.Email, { 'attr': {'class': "span12",
+                            'placeholder': "Email",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.numero, { 'attr': {'class': "span12",
+                            'placeholder': "Numero Telephone",'autofocus':"on"} }) }}
+                        {{ form_widget(Contact.message, { 'attr': {'class': "span12",
+                            'placeholder': "Message",'autofocus':"on"} }) }}
+
+                        {{ form_end(Contact) }}
+                    </div>
+                </div>
+                <div class="right__form__content">
+                    <h2>Nous Contacter Autrement</h2>
+                    <div class="top__form">
+
+                        <div class="nouncement__form">
+                            <strong>PAR TELEPHONE</strong>
+                            <p>du Lundi Au Vendredi de 9h a 18h au +21650174175 ou on s'appelle sur Whatsapp ? </p>
+                        </div>
+                        <div class="nouncement__form">
+                            <strong>PAR EMAIL</strong>
+                            <p>du Lundi Au Vendredi de 9h a 18h au +21650174175 ou on s'appelle sur Whatsapp ? </p>
+                        </div>
+
+                        <div class="nouncement__form">
+                            <strong>Prendre un rendez-vous avec un membre de notre Equipe </strong>
+                            <p>du Lundi Au Vendredi de 9h a 18h au +21650174175 ou on s'appelle sur Whatsapp ? </p>
+                        </div>
+                        <div class="nouncement__form">
+                            <strong>ON SE TROUVE</strong>
+                            <p>du Lundi Au Vendredi de 9h a 18h au +21650174175 ou on s'appelle sur Whatsapp ? </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

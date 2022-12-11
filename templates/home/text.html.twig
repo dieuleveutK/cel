@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Celconsulting{% endblock %}
+
+{% block body %}
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content__main">
+
+    <div class="header__home about__xl">
+        <div class="linter">
+            <div class="logo">
+                <a href="{{ path('app_home') }}">Celconsulting</a>
+            </div>
+            <div class="nav__ul">
+                <a href="{{ path('app_home') }}" class="re__ixl"> &#8592;&nbsp;Retour</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__slide">
+        <div class="hero__text__lite">
+            <h2>Contacter-nous</h2>
+            <span>Contact</span>
+        </div>
+
+    </div>
+    <div class="bloc__time">
+        <div class="left__text">
+            {{ form_start(Contact, { 'attr': {'autocomplete': 'off'} })  }}
+
+            {{ form_widget(Contact.nom, { 'attr': {'class': "span12",
+                'placeholder': "Nom Complet",'autofocus':"on"} }) }}
+
+            {{ form_widget(Contact.email, { 'attr': {'class': "span12",
+                'placeholder': "email",'autofocus':"on"} }) }}
+            {{ form_widget(Contact.numero, { 'attr': {'class': "span12",
+                'placeholder': "Numero Telephone",'autofocus':"on"} }) }}
+            {{ form_widget(Contact.message, { 'attr': {'class': "span12",
+                'placeholder': "Message",'autofocus':"on"} }) }}
+
+            {{ form_end(Contact) }}
+        </div>
+        <div class="right__text">
+            <h5>Nous Contacter Autrement</h5>
+            <div class="grid__box__contact">
+                <div class="box__adress">
+                    <h2>Par Telephone <i class="bx bxl-mail"></i></h2>
+                    <p>
+                        <span class="blin__tex">
+                            <span class="blink__animate"></span>
+                           Numero d'appel Cellulaire: +216 50-143-175
+                        </span>
+                        <span  class="blin__tex">
+                            <span class="blink__animate"></span>
+                            Numero d'appel Whatsapp: +216 50-143-175
+                        </span>
+                    </p>
+                </div>
+                <div class="box__adress">
+                    <h2>Par Email</h2>
+                    <p>
+                    <p>
+                        <span  class="blin__tex">
+                            <span class="blink__animate"></span>
+                           Contactcelconsulting-intenation.com
+                        </span>
+                        <span  class="blin__tex">
+                            <span class="blink__animate"></span>
+                            Contactcelconsulting@gmail.com
+                        </span>
+                    </p>
+
+                    </p>
+                </div>
+                <div class="box__adress">
+                    <h2>Prendre un rendez-vous avec Nous <i class="bx bxl-mail"></i></h2>
+                    <p>
+                        <span class="blin__tex">
+                            <span class="blink__animate"></span>
+                           Numero d'appel Cellulaire: +216 50-143-175
+                        </span>
+                        <span  class="blin__tex">
+                            <span class="blink__animate"></span>
+                            Numero d'appel Whatsapp: +216 50-143-175
+                        </span>
+                    </p>
+                </div>
+                <div class="box__adress">
+                    <h2>ON SE TROUVE</h2>
+                    <p>
+                        <span  class="blin__tex" >
+                            <span class="blink__animate"></span>
+                            7 arret du train en partance vers Borj cedria
+                        </span>
+                        <span  class="blin__tex">
+                            <span class="blink__animate"></span>
+
+                            6 rue en diagonale du maison Aziza
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cart">
+    </div>
+    {% include'home/_footer.html.twig' %}
+    <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
+    </div>
+
+{% endblock %}
